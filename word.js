@@ -11,6 +11,34 @@ var numBlanks	= 0; // This will be the number of blanks we show based on the sol
 var blanksAndSuccesses = []; // Holds a mix of blank and solved letters (ex: 'n, _ _, n, _') 
 var wrongGuesses = []; // Holds all of the wrong guesses
 var dash = " _ ";
+
+var inquirer = require('inquirer');
+
+// I have a feeling I'm supposed to be using Inquirer here. Correct?? //
+function Word(chosenWord) {
+	this.chosenWord = chosenWord
+	this.print = function() {
+		console.log(chosenWord)
+	}
+}
+
+inquirer.prompt([{
+	name: "name",
+	message: "What's your name?"
+}, {
+	name: "position",
+	message: "What's your position?"
+}, {
+	name: "age",
+	message: "What's your age?"
+}, {
+	name: "language",
+	message: "What's your favorite language?"
+}]).then(function(answers){
+    var newGuy = new Programmer(answers.name, answers.position, answers.age, answers.language);
+	newGuy.print();
+})
+
 // function randomWord() {
 // 	var chosenWord = words[Math.floor(Math.random() * words.length)];
 // 	console.log("random word: " + chosenWord);

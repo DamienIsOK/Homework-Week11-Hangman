@@ -20,7 +20,6 @@
 * `main.js` will contain the logic of your app. Running it in Terminal/Bash will start the game.
 
 	+ Create a variable with # of guesses
-	+ If letter guessed is in the array, then replace _ with that letter
 	+ If letter guessed is NOT in the array, then decrement guesses
 	+ Log the remaining # of guesses
 	+ If # of guesses is 0 then log, "You lose"
