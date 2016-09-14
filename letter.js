@@ -5,10 +5,16 @@ var gameJS = require('./game.js');
 var dash = "_ ";
 var emptyLetters = [];
 
-function checkLetters(){
-		var split = chosenWord.split("");
-		console.log("split: " + split)
-		emptyLetters.push(split);
-		console.log(emptyLetters);
-	
-};
+function dashWord() {
+
+	for(var i = 0; i < lettersInChosenWord.length; i++) {
+		if(gameJS.playerGuess.indexOf(lettersInChosenWord[i]) >= 0){
+			console.log(result = result + gameJS.playerGuess);
+		} else {
+			console.log(result = result + dash);
+		}
+	}
+
+}
+
+dashWord();

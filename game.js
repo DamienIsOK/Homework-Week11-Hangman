@@ -9,6 +9,11 @@ var lossCounter = 0;
 var numGuesses  = 9;
 
 
+var chosenWord = words[Math.floor(Math.random() * words.length)];
+console.log("random word: " + chosenWord);
+
+lettersInChosenWord = chosenWord.split('');
+console.log(lettersInChosenWord);
 
 // var randomWord = function() {
 // 	var chosenWord = wordsJS.words[Math.floor(Math.random() * wordsJS.words.length)];
