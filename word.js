@@ -23,19 +23,10 @@ function Word(chosenWord) {
 }
 
 inquirer.prompt([{
-	name: "name",
-	message: "What's your name?"
-}, {
-	name: "position",
-	message: "What's your position?"
-}, {
-	name: "age",
-	message: "What's your age?"
-}, {
-	name: "language",
-	message: "What's your favorite language?"
+	name: "letter",
+	message: "Choose a letter"
 }]).then(function(answers){
-    var newGuy = new Programmer(answers.name, answers.position, answers.age, answers.language);
+    var newGuy = new Programmer(answers.letterChosen);
 	newGuy.print();
 })
 

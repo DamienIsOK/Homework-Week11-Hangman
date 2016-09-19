@@ -1,31 +1,14 @@
-var wordsJS = require('./word.js');
-var lettersJS = require('./letter.js');
-var gameJS = require('./game.js');
-
-var dash = "_ ";
-var emptyLetters = [];
-
+var userGuess = process.argv[2];
 var words = ["atlanta", "baltimore", "chicago", "detroit", "houston", "indianapolis", "new york"];
-var result = "";
+var lettersInChosenWord = ["t"];
+var dash = "_ ";
 
-var chosenWord  = ""; 
-var lettersInChosenWord = []; 
-var arrayofChosenWord = [];
-var numBlanks	= 0; 
-var blanksAndSuccesses = [];  
-var wrongGuesses = []; 
-var dash = " _ ";
-
-function dashWord() {
-
-	for(var i = 0; i < lettersInChosenWord.length; i++) {
-		if(gameJS.playerGuess.indexOf(lettersInChosenWord[i]) >= 0){
-			console.log(result = result + gameJS.playerGuess);
+function Letters(letter) {
+	correctLetter: function(){
+		if(words.indexOf(userGuess)) {
+			console.log("Correct word")
 		} else {
-			console.log(result = result + dash);
+			console.log("Inccorect word")
 		}
 	}
-
 }
-
-dashWord();
